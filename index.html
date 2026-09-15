@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricard Cruz Frutos - Desarrollador Front-end & SEO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="oscuro-claro">
+        <!-- Grupo para los botones de Modo de Visualización -->
+        <div class="selector-modo">
+            <button id="btn-modo-pantalla" class="btn-modo">Modo Pantalla</button>
+            <button id="btn-modo-papel" class="btn-modo">Modo Papel</button>
+        </div>
+
+        <!-- Selector de Idioma -->
+        <div class="selector-idiomas">
+            <button id="btn-es" class="btn-lang">ES</button>
+            <button id="btn-ca" class="btn-lang">CA</button>
+            <button id="btn-en" class="btn-lang">EN</button>
+        </div>
+    </div>
+
+    <!-- Cabecera / Datos Personales -->
+    <header class="header">
+        <h1>Ricard Cruz Frutos</h1>
+        <p class="subtitulo" id="txt-subtitulo">Desarrollador Web Front-end & Especialista SEO</p>
+        <div class="contacto">
+            <span id="txt-ubicacion">Barcelona, Cataluña</span> |
+            <span>650 104 200</span> |
+            <a href="mailto:ricardo3media@gmail.com">ricardo3media@gmail.com</a> |
+            <a href="#" target="_blank">LinkedIn</a> |
+            <a href="#" target="_blank">GitHub</a>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Perfil Profesional -->
+        <details class="card" open>
+            <summary><h2 id="txt-perfil-titulo">Perfil Profesional</h2></summary>
+            <p id="txt-perfil-texto">Desarrollador Web Front-end en formación con sólida base técnica en SEO y SEM
+                (Máster KSchool, 9,7). Especializado en maquetación web responsive (HTML5, CSS3, JavaScript, PHP, bases de
+                datos como MySQL) y optimización de rendimiento (WPO). Enfocado en la implementación de un código limpio y
+                accesible, aportando capacidad analítica y resolución de problemas técnicos.</p>
+        </details>
+
+        <!-- Proyectos Destacados -->
+        <details class="card">
+            <summary><h2 id="txt-proyectos-titulo">Proyectos Destacados (GitHub)</h2></summary>
+
+            <div class="proyecto-item">
+                <h3>La Factoría del SEO</h3>
+                <p id="txt-proyecto-1">Interfaz web optimizada para rendimiento y SEO técnico con maquetación limpia
+                    en HTML/CSS integrada con Google Analytics 4 y Search Console.</p>
+                <a href="https://rcruz251982.github.io/FactoriaDelSeo/" target="_blank" class="btn-proyecto"
+                    id="btn-proj-1">Ver proyecto</a>
+            </div>
+
+            <div class="proyecto-item">
+                <h3>OtakuVault (Anime)</h3>
+                <p id="txt-proyecto-2">Aplicación web dinámica desarrollada bajo estrictas pautas de UI/UX y buenas
+                    prácticas front-end, destacando por el uso de JavaScript avanzado para una interactividad
+                    fluida.</p>
+                <a href="https://rcruz251982.github.io/evaluacion-continua/" target="_blank" class="btn-proyecto"
+                    id="btn-proj-2">Ver proyecto</a>
+            </div>
+        </details>
+
+        <!-- Experiencia Profesional -->
+        <details class="card">
+            <summary><h2 id="txt-exp-titulo">Experiencia Profesional</h2></summary>
+
+            <div class="exp-item">
+                <h3 id="txt-exp1-cargo">Encargado de Almacén | BLM FCB Barcelona</h3>
+                <span class="fecha" id="txt-exp1-fecha">Jul 2025 - Sep 2025</span>
+                <p id="txt-exp1-desc">Control de stock y logística en tienda oficial (El Prat) en etapa de
+                    transición formativa al sector digital.</p>
+            </div>
+
+            <div class="exp-item">
+                <h3>Staff / Asistente SEO & Contenidos | Crucerum.com</h3>
+                <span class="fecha">Jul 2016 - May 2024</span>
+                <p>Gestión integral de contenidos web, control de indexabilidad, rastreo, analítica SEO/SEM y
+                    optimización de recursos gráficos (banners, mapas vectoriales y promociones).</p>
+            </div>
+
+            <div class="exp-item">
+                <h3>Staff de Operaciones | Grupo Arena Disco</h3>
+                <span class="fecha">May 2004 - Sep 2017</span>
+                <p>Coordinación operativa y atención directa al público en entornos de alta exigencia.</p>
+            </div>
+        </details>
+
+        <!-- Formación Académica -->
+        <details class="card">
+            <summary><h2 id="txt-form-titulo">Formación Académica</h2></summary>
+            <ul class="formacion-list">
+                <li id="txt-form-1">
+                    <strong>Certificado de Profesionalidad Confección y Publicación Páginas Web
+                        (IFCD0110)</strong><br>
+                    Politécnics (Mar 2026 - Actualidad) | 460h. HTML5, CSS3, JavaScript, PHP, Bootstrap, WordPress,
+                    W3C y CMS.
+                </li>
+                <li id="txt-form-2">
+                    <strong>Máster en SEO - SEM Profesional</strong><br>
+                    KSchool (Nov 2024 - Jun 2025) | Nota: 9,7 (150h). SEO técnico/contenidos, SEM, analítica web y
+                    auditorías de visibilidad.
+                </li>
+                <li id="txt-form-3">
+                    <strong>Graduado Superior en Diseño Gráfico</strong><br>
+                    Centre Universitari BAU (2008-2014). Comunicación visual, tipografía, branding y maquetación
+                    editorial.
+                </li>
+            </ul>
+        </details>
+
+        <!-- Competencias e Informática -->
+        <details class="card">
+            <summary><h2 id="txt-comp-titulo">Competencias e Informática</h2></summary>
+            <div class="botones-competencias">
+                <button class="btn-cat" data-categoria="desarrollo" id="btn-cat-desarrollo">Desarrollo</button>
+                <button class="btn-cat" data-categoria="seo" id="btn-cat-seo">SEO & Analítica</button>
+                <button class="btn-cat" data-categoria="diseno" id="btn-cat-diseno">Diseño y Usabilidad</button>
+            </div>
+            <div id="contenedor-competencias" class="competencias-grid">
+                <span class="tag">HTML5 / CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">PHP & MySQL</span>
+                <span class="tag">Screaming Frog</span>
+                <span class="tag">Google Analytics G4</span>
+                <span class="tag">UI/UX</span>
+            </div>
+        </details>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
