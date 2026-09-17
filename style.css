@@ -112,7 +112,6 @@ body.light-mode .btn-modo.activo {
     border: 1px solid #222;
 }
 
-/* Estilo para que el summary actúe como botón desplegable con flecha */
 .card summary {
     cursor: pointer;
     list-style: none;
@@ -131,7 +130,6 @@ body.light-mode .btn-modo.activo {
     margin-bottom: 0;
 }
 
-/* Indicador visual de flecha en el summary */
 .card summary::after {
     content: "▼";
     float: right;
@@ -145,7 +143,6 @@ body.light-mode .btn-modo.activo {
     transform: rotate(180deg);
 }
 
-/* Espaciado interno cuando la tarjeta está abierta */
 .card[open] summary {
     border-bottom: 2px solid #262626;
     padding-bottom: 10px;
@@ -258,13 +255,40 @@ body.light-mode .card[open] summary {
 }
 
 body.light-mode .header h1,
+body.light-mode .card summary h2,
 body.light-mode .proyecto-item h3,
 body.light-mode .exp-item h3 {
     color: #0f172a;
+    font-weight: 700;
+}
+
+body.light-mode .card summary::after {
+    color: #7c3aed;
 }
 
 body.light-mode .subtitulo {
     color: #7c3aed;
+}
+
+body.light-mode .contacto a {
+    color: #6d28d9;
+}
+
+body.light-mode .fecha {
+    color: #475569;
+    font-weight: 500;
+}
+
+body.light-mode .tag {
+    background-color: #f1f5f9;
+    color: #334155;
+    border: 1px solid #cbd5e1;
+}
+
+body.light-mode .btn-cat {
+    background-color: #f1f5f9;
+    color: #334155;
+    border-color: #cbd5e1;
 }
 
 body.light-mode .btn-cat:hover {
@@ -278,6 +302,11 @@ body.light-mode .btn-cat.activo {
     border-color: #7c3aed;
 }
 
-body.light-mode .fecha {
-    color: #64748b;
+body.light-mode .btn-proyecto {
+    background-color: #7c3aed;
+    color: white;
+}
+
+body.light-mode .btn-proyecto:hover {
+    background-color: #6d28d9;
 }

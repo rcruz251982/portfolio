@@ -1,3 +1,7 @@
+// DECLARACION OBJETO TRADUCCIONES ES EN CA
+
+
+
 const traducciones = {
     es: {
         btnPantalla: "Modo Pantalla",
@@ -73,14 +77,14 @@ const traducciones = {
     }
 };
 
-// 2. DATOS DE COMPETENCIAS
+// DECLARACION ARRAY DATOS DE COMPETENCIAS
 const competenciasData = {
     desarrollo: ["HTML5 / CSS3", "JavaScript", "PHP & MySQL", "Bootstrap", "Responsive Design", "Git / GitHub", "VS Code", "WordPress"],
     seo: ["Screaming Frog", "Sistrix", "Semrush", "PageSpeed Insights", "Google Analytics G4", "IA de Google", "W3C"],
     diseno: ["UI / UX", "Adobe Photoshop", "Adobe Illustrator", "Comunicación Visual", "Branding", "Maquetación Editorial"]
 };
 
-// 3. FUNCIÓN GENERAL PARA SELECCIONAR EL IDIOMA
+// FUNCIÓN GENERAL PARA SELECCIONAR EL IDIOMA
 function cambiarIdioma(lang) {
     const t = traducciones[lang];
     if (!t) return;
