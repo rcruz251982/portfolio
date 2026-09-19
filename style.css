@@ -88,30 +88,32 @@ body.light-mode .btn-modo.activo {
 
 .header h1 {
     color: #ffffff;
-    margin-bottom: 5px;
-    font-size: 2rem;
+    margin-bottom: 2px;
 }
 
 .subtitulo {
     color: #a78bfa;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
     font-size: 1.05rem;
 }
 
 .contacto {
     display: flex;
     flex-direction: column;
-    gap: 6px;
-    font-size: 0.95rem;
+    gap: 8px;
+    font-size: 0.9rem;
+    align-items: center;
 }
 
-.contacto-linea {
+.contacto-linea-datos,
+.contacto-linea-redes {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 8px;
+    text-align: center;
 }
 
 .contacto a {
@@ -386,6 +388,12 @@ body.light-mode .btn-proyecto:hover {
         font-size: 0.95rem;
     }
 
+    .contacto-linea-datos,
+    .contacto-linea-redes {
+        gap: 6px;
+        font-size: 0.85rem;
+    }
+
     .card {
         padding: 18px 15px;
     }
@@ -405,8 +413,8 @@ body.light-mode .btn-proyecto:hover {
 }
 
 @media screen and (max-width: 480px) {
-    .contacto-linea {
-        flex-direction: column;
-        gap: 4px;
+    .contacto-linea-datos,
+    .contacto-linea-redes {
+        font-size: 0.8rem;
     }
 }
