@@ -97,7 +97,7 @@ body.light-mode .btn-modo.activo {
     color: #a78bfa;
     font-weight: 600;
     margin-bottom: 12px;
-    font-size: clamp(0.75rem, 0.5vw + 0.75rem, 1.1rem);
+    font-size: clamp(0.9rem, 0.5vw + 0.8rem, 1.1rem);
     padding: 0 10px;
 }
 
@@ -392,6 +392,11 @@ body.light-mode .btn-proyecto:hover {
 
     .header {
         padding: 20px 10px;
+    }
+
+    /* Reducimos un poco el tamaño de la frase solo en móvil para que quepa bien en inglés */
+    .subtitulo {
+        font-size: 0.8rem;
     }
 
     .contacto-linea-datos,
