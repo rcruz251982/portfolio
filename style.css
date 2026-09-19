@@ -10,7 +10,6 @@ body {
     color: #e0e0e0;
     line-height: 1.6;
     padding: 20px;
-    /* Usamos clamp para que el texto base escale suavemente según la pantalla */
     font-size: clamp(0.9rem, 1vw + 0.5rem, 1.05rem);
 }
 
@@ -88,7 +87,6 @@ body.light-mode .btn-modo.activo {
     border: 1px solid #222;
 }
 
-/* Título principal grande en PC y adaptado en móvil */
 .header h1 {
     color: #ffffff;
     margin-bottom: 6px;
@@ -99,7 +97,7 @@ body.light-mode .btn-modo.activo {
     color: #a78bfa;
     font-weight: 600;
     margin-bottom: 12px;
-    font-size: clamp(0.9rem, 0.5vw + 0.8rem, 1.1rem);
+    font-size: clamp(0.75rem, 0.5vw + 0.75rem, 1.1rem);
     padding: 0 10px;
 }
 
@@ -144,7 +142,6 @@ body.light-mode .btn-modo.activo {
     border: 1px solid #222;
 }
 
-/* AQUÍ ESTÁ EL TRUCO: Fijamos la posición relativa para que la línea no baile */
 .card summary {
     cursor: pointer;
     list-style: none;
@@ -156,7 +153,6 @@ body.light-mode .btn-modo.activo {
     display: none;
 }
 
-/* Títulos de las tarjetas más grandes en pantalla grande */
 .card summary h2 {
     color: #8b5cf6;
     font-size: clamp(1.3rem, 1.5vw + 0.8rem, 1.7rem);
@@ -180,11 +176,10 @@ body.light-mode .btn-modo.activo {
 }
 
 .card[open] summary {
-    border-bottom: none; /* Anulamos el borde nativo que se descentraba */
+    border-bottom: none;
     margin-bottom: 15px;
 }
 
-/* Creamos la línea de forma absoluta para clavar su posición milimétricamente */
 .card[open] summary::before {
     content: "";
     position: absolute;
@@ -303,6 +298,10 @@ body.light-mode .card {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
+body.light-mode .card[open] summary {
+    border-bottom-color: #e2e8f0;
+}
+
 body.light-mode .header h1,
 body.light-mode .card summary h2,
 body.light-mode .proyecto-item h3,
@@ -359,10 +358,6 @@ body.light-mode .btn-proyecto {
 body.light-mode .btn-proyecto:hover {
     background-color: #6d28d9;
 }
-
-/* ==========================================
-   MEDIA QUERIES PARA ADAPTACIÓN MÓVIL
-   ========================================== */
 
 @media screen and (max-width: 768px) {
     body {
