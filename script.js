@@ -1,7 +1,5 @@
 // DECLARACION OBJETO TRADUCCIONES ES EN CA
 
-
-
 const traducciones = {
     es: {
         btnPantalla: "Modo Pantalla",
@@ -10,9 +8,10 @@ const traducciones = {
         ubicacion: "Barcelona, Cataluña",
         perfilTitulo: "Perfil Profesional",
         perfilTexto: "Desarrollador Web Front-end en formación con sólida base técnica en SEO y SEM (Máster KSchool, 9,7). Especializado en maquetación web responsive (HTML5, CSS3, JavaScript, PHP, bases de datos como MySQL) y optimización de rendimiento (WPO). Enfocado en la implementación de un código limpio y accesible, aportando capacidad analítica y resolución de problemas técnicos.",
-        proyectosTitulo: "Proyectos Destacados (GitHub)",
+        proyectosTitulo: "Proyectos Destacados",
         proyecto1: "Interfaz web optimizada para rendimiento y SEO técnico con maquetación limpia en HTML/CSS integrada con Google Analytics 4 y Search Console.",
         proyecto2: "Aplicación web dinámica desarrollada bajo estrictas pautas de UI/UX y buenas prácticas front-end, destacando por el uso de JavaScript avanzado para una interactividad fluida.",
+        proyecto3: "Caso práctico de auditoría técnica y estratégica SEO: análisis de indexación, resolución de contenido duplicado, seguridad HTTPS y optimización de arquitectura web.",
         btnVerProyecto: "Ver proyecto",
         expTitulo: "Experiencia Profesional",
         exp1Cargo: "Encargado de Almacén | BLM FCB Barcelona",
@@ -34,9 +33,10 @@ const traducciones = {
         ubicacion: "Barcelona, Catalunya",
         perfilTitulo: "Perfil Professional",
         perfilTexto: "Desenvolupador Web Front-end en formació amb sòlida base tècnica en SEO i SEM (Màster KSchool, 9,7). Especialitzat en maquetació web responsive (HTML5, CSS3, JavaScript, PHP, bases de dades com MySQL) i optimització de rendiment (WPO). Enfocat en la implementació d'un codi net i accessible, aportant capacitat analítica i resolució de problemes tècnics.",
-        proyectosTitulo: "Projectes Destacats (GitHub)",
+        proyectosTitulo: "Projectes Destacats",
         proyecto1: "Interfície web optimitzada per a rendiment i SEO tècnic amb maquetació neta en HTML/CSS integrada amb Google Analytics 4 i Search Console.",
         proyecto2: "Aplicació web dinàmica desenvolupada sota estrictes pautes d'UI/UX i bones pràctiques front-end, destacant per l'ús de JavaScript avançat per a una interactivitat fluida.",
+        proyecto3: "Cas pràctic d'auditoria tècnica i estratègica SEO: anàlisi d'indexació, resolució de contingut duplicat, seguretat HTTPS i optimització d'arquitectura web.",
         btnVerProyecto: "Veure projecte",
         expTitulo: "Experiència Professional",
         exp1Cargo: "Encarregat de Magatzem | BLM FCB Barcelona",
@@ -58,9 +58,10 @@ const traducciones = {
         ubicacion: "Barcelona, Catalonia",
         perfilTitulo: "Professional Profile",
         perfilTexto: "Front-end Web Developer in training with a solid technical foundation in SEO and SEM (KSchool Master's, 9.7). Specialized in responsive web layout (HTML5, CSS3, JavaScript, PHP, databases like MySQL) and performance optimization (WPO). Focused on implementing clean and accessible code, bringing analytical skills and technical problem-solving.",
-        proyectosTitulo: "Featured Projects (GitHub)",
+        proyectosTitulo: "Featured Projects",
         proyecto1: "Web interface optimized for performance and technical SEO with clean HTML/CSS layout integrated with Google Analytics 4 and Search Console.",
         proyecto2: "Dynamic web application developed under strict UI/UX guidelines and front-end best practices, featuring advanced JavaScript for smooth interactivity.",
+        proyecto3: "Practical case of technical and strategic SEO audit: indexing analysis, duplicate content resolution, HTTPS security, and web architecture optimization.",
         btnVerProyecto: "View project",
         expTitulo: "Professional Experience",
         exp1Cargo: "Warehouse Manager | BLM FCB Barcelona",
@@ -97,8 +98,10 @@ function cambiarIdioma(lang) {
     document.getElementById('txt-proyectos-titulo').textContent = t.proyectosTitulo;
     document.getElementById('txt-proyecto-1').textContent = t.proyecto1;
     document.getElementById('txt-proyecto-2').textContent = t.proyecto2;
+    document.getElementById('txt-proyecto-3').textContent = t.proyecto3;
     document.getElementById('btn-proj-1').textContent = t.btnVerProyecto;
     document.getElementById('btn-proj-2').textContent = t.btnVerProyecto;
+    document.getElementById('btn-proj-3').textContent = t.btnVerProyecto;
     document.getElementById('txt-exp-titulo').textContent = t.expTitulo;
     document.getElementById('txt-exp1-cargo').textContent = t.exp1Cargo;
     document.getElementById('txt-exp1-fecha').textContent = t.exp1Fecha;
@@ -111,7 +114,6 @@ function cambiarIdioma(lang) {
     document.getElementById('btn-cat-desarrollo').textContent = t.btnDesarrollo;
     document.getElementById('btn-cat-seo').textContent = t.btnSeo;
     document.getElementById('btn-cat-diseno').textContent = t.btnDiseno;
-
 }
 
 // Eventos de Idioma
@@ -127,7 +129,6 @@ document.getElementById('btn-modo-pantalla').addEventListener('click', () => {
 document.getElementById('btn-modo-papel').addEventListener('click', () => {
     document.body.classList.add('light-mode');
 });
-
 
 const contenedorCompetencias = document.getElementById('contenedor-competencias');
 const botonesCat = document.querySelectorAll('.btn-cat');
@@ -148,7 +149,6 @@ function mostrarCompetencias(categoria, botonPulsado) {
     }
 
     botonPulsado.classList.add('activo');
-
 }
 
 document.getElementById('btn-cat-desarrollo').addEventListener('click', function() {

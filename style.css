@@ -18,11 +18,19 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
 .selector-modo {
     display: flex;
-    gap: 5px;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.selector-idiomas {
+    display: flex;
+    gap: 6px;
 }
 
 .btn-modo,
@@ -30,11 +38,11 @@ body {
     background-color: #262626;
     color: #e2e8f0;
     border: 1px solid #333;
-    padding: 6px 12px;
+    padding: 8px 14px;
     border-radius: 6px;
     cursor: pointer;
     font-weight: 600;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     transition: background 0.2s, transform 0.1s, border-color 0.2s;
 }
 
@@ -81,12 +89,29 @@ body.light-mode .btn-modo.activo {
 .header h1 {
     color: #ffffff;
     margin-bottom: 5px;
+    font-size: 2rem;
 }
 
 .subtitulo {
     color: #a78bfa;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.95rem;
+}
+
+.contacto-linea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .contacto a {
@@ -123,7 +148,7 @@ body.light-mode .btn-modo.activo {
 
 .card summary h2 {
     color: #8b5cf6;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     display: inline-block;
     border-bottom: none;
     padding-bottom: 0;
@@ -151,17 +176,20 @@ body.light-mode .btn-modo.activo {
 
 .botones-competencias {
     margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .btn-cat {
     background-color: #262626;
     color: #94a3b8;
     border: 1px solid #333;
-    padding: 8px 14px;
+    padding: 10px 16px;
     border-radius: 6px;
     cursor: pointer;
-    margin-right: 5px;
     font-weight: 600;
+    font-size: 0.95rem;
     transition: background 0.2s, color 0.2s, transform 0.1s;
 }
 
@@ -190,7 +218,7 @@ body.light-mode .btn-modo.activo {
     border-radius: 20px;
     font-size: 0.9rem;
     border: 1px solid #333;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .proyecto-item,
@@ -200,7 +228,7 @@ body.light-mode .btn-modo.activo {
 
 .proyecto-item h3,
 .exp-item h3 {
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     font-size: 1.1rem;
     color: #f1f5f9;
 }
@@ -225,7 +253,7 @@ body.light-mode .btn-modo.activo {
     margin-top: 10px;
     background-color: #7c3aed;
     color: white;
-    padding: 6px 12px;
+    padding: 8px 14px;
     border-radius: 4px;
     text-decoration: none;
     font-size: 0.9rem;
@@ -309,4 +337,69 @@ body.light-mode .btn-proyecto {
 
 body.light-mode .btn-proyecto:hover {
     background-color: #6d28d9;
+}
+
+/* ==========================================
+   MEDIA QUERIES PARA ADAPTACIÓN MÓVIL
+   ========================================== */
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 12px;
+    }
+
+    .oscuro-claro {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .selector-modo,
+    .selector-idiomas {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .btn-modo,
+    .btn-lang {
+        flex: 1;
+        text-align: center;
+        padding: 10px 8px;
+    }
+
+    .header {
+        padding: 20px 15px;
+    }
+
+    .header h1 {
+        font-size: 1.6rem;
+    }
+
+    .subtitulo {
+        font-size: 0.95rem;
+    }
+
+    .card {
+        padding: 18px 15px;
+    }
+
+    .card summary h2 {
+        font-size: 1.3rem;
+    }
+
+    .botones-competencias {
+        flex-direction: column;
+    }
+
+    .btn-cat {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contacto-linea {
+        flex-direction: column;
+        gap: 4px;
+    }
 }
