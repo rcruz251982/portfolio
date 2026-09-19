@@ -94,8 +94,9 @@ body.light-mode .btn-modo.activo {
 .subtitulo {
     color: #a78bfa;
     font-weight: 600;
-    margin-bottom: 8px;
-    font-size: 1.05rem;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    padding: 0 10px;
 }
 
 .contacto {
@@ -377,21 +378,22 @@ body.light-mode .btn-proyecto:hover {
     }
 
     .header {
-        padding: 20px 15px;
+        padding: 20px 10px;
     }
 
     .header h1 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 
     .subtitulo {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
+        line-height: 1.4;
     }
 
     .contacto-linea-datos,
     .contacto-linea-redes {
-        gap: 6px;
-        font-size: 0.85rem;
+        gap: 8px;
+        font-size: 0.8rem;
     }
 
     .card {
@@ -415,6 +417,7 @@ body.light-mode .btn-proyecto:hover {
 @media screen and (max-width: 480px) {
     .contacto-linea-datos,
     .contacto-linea-redes {
-        font-size: 0.8rem;
+        font-size: 0.78rem;
+        gap: 6px;
     }
 }
