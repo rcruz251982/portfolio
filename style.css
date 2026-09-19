@@ -93,11 +93,12 @@ body.light-mode .btn-modo.activo {
     font-size: clamp(1.8rem, 3vw + 1rem, 2.6rem);
 }
 
+/* Subtítulo más grande y elegante en escritorio */
 .subtitulo {
     color: #a78bfa;
     font-weight: 600;
-    margin-bottom: 12px;
-    font-size: clamp(0.9rem, 0.5vw + 0.8rem, 1.1rem);
+    margin-bottom: 15px;
+    font-size: clamp(1rem, 0.8vw + 0.8rem, 1.25rem);
     padding: 0 10px;
 }
 
@@ -109,14 +110,19 @@ body.light-mode .btn-modo.activo {
     align-items: center;
 }
 
-.contacto-linea-datos,
-.contacto-linea-redes {
+/* EN ESCRITORIO: Fusionamos las dos líneas en una sola fila continua */
+.contacto {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 8px;
-    text-align: center;
+    gap: 10px;
+}
+
+.contacto-linea-datos,
+.contacto-linea-redes {
+    display: contents; /* Hace que los hijos salgan directamente en la fila del padre flex */
 }
 
 .contacto a {
@@ -359,6 +365,7 @@ body.light-mode .btn-proyecto:hover {
     background-color: #6d28d9;
 }
 
+/* EN MÓVIL: Reseteamos el truco para que funcionen como bloques independientes y respeten tus dos líneas */
 @media screen and (max-width: 768px) {
     body {
         padding: 12px;
@@ -394,13 +401,23 @@ body.light-mode .btn-proyecto:hover {
         padding: 20px 10px;
     }
 
-    /* Reducimos un poco el tamaño de la frase solo en móvil para que quepa bien en inglés */
     .subtitulo {
         font-size: 0.8rem;
     }
 
+    /* Volvemos al formato original en móvil para que LinkedIn y GitHub bajen juntos */
+    .contacto {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
     .contacto-linea-datos,
     .contacto-linea-redes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
         gap: 8px;
         font-size: 0.8rem;
     }
