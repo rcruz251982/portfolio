@@ -144,9 +144,12 @@ body.light-mode .btn-modo.activo {
     border: 1px solid #222;
 }
 
+/* AQUÍ ESTÁ EL TRUCO: Fijamos la posición relativa para que la línea no baile */
 .card summary {
     cursor: pointer;
     list-style: none;
+    position: relative;
+    padding-bottom: 10px;
 }
 
 .card summary::-webkit-details-marker {
@@ -177,9 +180,23 @@ body.light-mode .btn-modo.activo {
 }
 
 .card[open] summary {
-    border-bottom: 2px solid #262626;
-    padding-bottom: 10px;
+    border-bottom: none; /* Anulamos el borde nativo que se descentraba */
     margin-bottom: 15px;
+}
+
+/* Creamos la línea de forma absoluta para clavar su posición milimétricamente */
+.card[open] summary::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #262626;
+}
+
+body.light-mode .card[open] summary::before {
+    background-color: #e2e8f0;
 }
 
 .botones-competencias {
@@ -284,10 +301,6 @@ body.light-mode .card {
     background: #ffffff;
     border-color: #e2e8f0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-body.light-mode .card[open] summary {
-    border-bottom-color: #e2e8f0;
 }
 
 body.light-mode .header h1,
